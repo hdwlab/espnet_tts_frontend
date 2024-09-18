@@ -13,7 +13,7 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 
 import re
 
-from unidecode import unidecode
+from anyascii import anyascii
 
 from .numbers import normalize_numbers
 
@@ -62,7 +62,7 @@ def collapse_whitespace(text):
 
 
 def convert_to_ascii(text):
-    return unidecode(text)
+    return anyascii(text)
 
 
 def basic_cleaners(text):
